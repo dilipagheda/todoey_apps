@@ -9,6 +9,7 @@ class AddTaskForm extends StatefulWidget {
 
 class _AddTaskFormState extends State<AddTaskForm> {
   String taskValue;
+  bool isValidate = false;
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +45,7 @@ class _AddTaskFormState extends State<AddTaskForm> {
               ),
               autofocus: true,
               decoration: InputDecoration(
+                errorText: isValidate ? "Please enter a value" : null,
                 focusedBorder: UnderlineInputBorder(
                     borderSide: new BorderSide(
                   color: Color(0xFF63C9FE),
@@ -57,6 +59,15 @@ class _AddTaskFormState extends State<AddTaskForm> {
             RaisedButton(
               color: Color(0xFF63C9FE),
               onPressed: () {
+                if (taskValue.length == 0) {
+                  setState(() {
+                    isValidate = true;
+                  });
+                  return;
+                }
+                setState(() {
+                  isValidate = false;
+                });
                 taskList.addTask(taskValue);
                 Navigator.pop(context);
               },
