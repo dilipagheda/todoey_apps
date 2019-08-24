@@ -20,4 +20,9 @@ class TaskList extends ChangeNotifier {
     _tasks.add(Task(desc: desc, isDone: false));
     notifyListeners();
   }
+
+  void toggleDone(Task task, bool value) {
+    task.isDone = value;
+    notifyListeners();
+  }
 }

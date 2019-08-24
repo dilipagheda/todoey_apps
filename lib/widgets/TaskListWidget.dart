@@ -13,7 +13,9 @@ class TaskListWidget extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: ListView(
           children: <Widget>[
-            ...taskList.tasks.map((task) => TaskItemWidget(task))
+            ...taskList.tasks.map((task) => TaskItemWidget(task, (value) {
+                  taskList.toggleDone(task, value);
+                }))
           ],
         ));
   }
