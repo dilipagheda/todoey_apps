@@ -15,3 +15,8 @@ The objective of this project is to understand how to manage state in Flutter. W
 - Learn to lift state up to be able to access it from children widgets.
 - Learn about design patterns and why they are useful.
 - Understand how the Provider package works and use it to manage app state.
+
+# Screenshots
+
+|<img src="https://github.com/dilipagheda/todoey_flutter/blob/master/screenshots/screen1.png?sanitize=true&raw=true" />|<img src="https://github.com/dilipagheda/todoey_flutter/blob/master/screenshots/screen2.png?sanitize=true&raw=true" />|
+|<img src="https://github.com/dilipagheda/todoey_flutter/blob/master/screenshots/screen3.png?sanitize=true&raw=true" />|<img src="https://github.com/dilipagheda/todoey_flutter/blob/master/screenshots/screen4.png?sanitize=true&raw=true" />|
