@@ -59,7 +59,7 @@ class _AddTaskFormState extends State<AddTaskForm> {
             RaisedButton(
               color: Color(0xFF63C9FE),
               onPressed: () {
-                if (taskValue.length == 0) {
+                if (taskValue == null || taskValue.length == 0) {
                   setState(() {
                     isValidate = true;
                   });

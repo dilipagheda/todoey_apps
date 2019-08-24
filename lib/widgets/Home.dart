@@ -3,9 +3,8 @@ import 'package:provider/provider.dart';
 import 'package:todoey_flutter/models/TaskList.dart';
 
 import 'AddTaskForm.dart';
+import 'EmptyStateWidget.dart';
 import 'TaskListWidget.dart';
-
-//#63C9FE
 
 class Home extends StatelessWidget {
   @override
@@ -50,7 +49,9 @@ class Home extends StatelessWidget {
                   ),
                   SizedBox(height: 5),
                   Text(
-                    "${taskList.tasks.length} Tasks",
+                    taskList.tasks.length > 0
+                        ? "${taskList.tasks.length} Tasks"
+                        : "No items",
                     style: TextStyle(
                       fontSize: 25,
                       color: Colors.white,
@@ -72,7 +73,9 @@ class Home extends StatelessWidget {
                       topRight: Radius.circular(30),
                     ),
                   ),
-                  child: TaskListWidget(),
+                  child: taskList.tasks.length == 0
+                      ? EmptyStateWidget()
+                      : TaskListWidget(),
                 ),
               ),
             )
