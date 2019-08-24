@@ -25,4 +25,9 @@ class TaskList extends ChangeNotifier {
     task.isDone = value;
     notifyListeners();
   }
+
+  void deleteItem(Task task) {
+    _tasks.remove(task);
+    notifyListeners();
+  }
 }

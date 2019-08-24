@@ -15,6 +15,8 @@ class TaskListWidget extends StatelessWidget {
           children: <Widget>[
             ...taskList.tasks.map((task) => TaskItemWidget(task, (value) {
                   taskList.toggleDone(task, value);
+                }, () {
+                  taskList.deleteItem(task);
                 }))
           ],
         ));
