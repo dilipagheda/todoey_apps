@@ -1,12 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:todoey_flutter/models/TaskList.dart';
+
+import 'AddTaskForm.dart';
+import 'TaskListWidget.dart';
 
 //#63C9FE
 
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var taskList = Provider.of<TaskList>(context);
     return Scaffold(
-      //backgroundColor: Color(0xFF63C9FE),
+      floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed: () => showModalBottomSheet(
+                context: context,
+                builder: (context) => AddTaskForm(),
+              )),
       body: Container(
         width: double.infinity,
         child: Column(
@@ -39,7 +50,7 @@ class Home extends StatelessWidget {
                   ),
                   SizedBox(height: 5),
                   Text(
-                    "12 Tasks",
+                    "${taskList.tasks.length} Tasks",
                     style: TextStyle(
                       fontSize: 25,
                       color: Colors.white,
@@ -55,11 +66,13 @@ class Home extends StatelessWidget {
                 color: Color(0xFF63C9FE),
                 child: Container(
                   decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(30),
-                        topRight: Radius.circular(30),
-                      )),
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30),
+                      topRight: Radius.circular(30),
+                    ),
+                  ),
+                  child: TaskListWidget(),
                 ),
               ),
             )
