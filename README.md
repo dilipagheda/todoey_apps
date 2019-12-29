@@ -9,6 +9,8 @@ The aim of these projects is to quickly learn and be upto speed with any technol
 
 # Project 1: Todoey - Flutter - Mobile App
 ## Goal
+A todo list app using Flutter and Providers package for state management. This app uses beautiful UI, bottomsheet form, FAB and global statemanagement using Google recommended Providers package.
+
 The objective of this project is to understand how to manage state in Flutter. We'll look at various Flutter architecture choices and learn to use the officially recommended Provider package to manage our app state.
 
 ## Learnings
