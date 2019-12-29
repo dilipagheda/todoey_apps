@@ -4,7 +4,7 @@ This repo hosts implementations of Todoey project idea using variety of technolo
 The aim of these projects is to quickly learn and be upto speed with any technology, be it a mobile or web and also using any architectural style such as MVC vs SPA client + Web APIs.
 
 # Projects
-[Project 1 - Todoey - Flutter - Mobile App](#user-content-project-1---flashcards-mobile-app-reactnative)
+[Project 1 - Todoey - Flutter - Mobile App](#user-content-project-1-todoey---flutter---mobile-app)
 
 
 # Project 1: Todoey - Flutter - Mobile App
