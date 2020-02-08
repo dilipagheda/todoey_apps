@@ -31,3 +31,11 @@ The objective of this project is to understand how to manage state in Flutter. W
 |<img src="https://github.com/dilipagheda/todoey_flutter/blob/master/todoey_flutter/screenshots/screen3.png?sanitize=true&raw=true" />|<img src="https://github.com/dilipagheda/todoey_flutter/blob/master/todoey_flutter/screenshots/screen4.png?sanitize=true&raw=true" />|
 
 # Project 2: Wishlist App - .NET Core 3.0 MVC - Web App
+The ASP.NET Core WishList Application is designed to allow users to create their own wishlists, and other users to mark that they are buying those items in such a way the owner of the wish list isn't able to see, while other users are able to see. This application is designed using the Model View Controller design pattern.
+
+## Learnings
+- ASP.NET Identity (Cookie Based Authentication)
+- Entity Framework Core - SQLite
+- ASP.NET MVC + Razor Views
+- Use of [Authorize] Attributes to protect the routes
+- Unit Tests + Moq 
