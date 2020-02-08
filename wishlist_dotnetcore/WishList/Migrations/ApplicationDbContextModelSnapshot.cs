@@ -17,7 +17,7 @@ namespace WishList.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.0.1-rtm-125");
+                .HasAnnotation("ProductVersion", "2.0.3-rtm-10026");
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -185,7 +185,11 @@ namespace WishList.Migrations
                         .IsRequired()
                         .HasMaxLength(50);
 
+                    b.Property<string>("UserId");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Items");
                 });
@@ -233,6 +237,13 @@ namespace WishList.Migrations
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("WishList.Models.Item", b =>
+                {
+                    b.HasOne("WishList.Models.ApplicationUser", "User")
+                        .WithMany("Items")
+                        .HasForeignKey("UserId");
                 });
 #pragma warning restore 612, 618
         }
