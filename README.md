@@ -5,6 +5,7 @@ The aim of these projects is to quickly learn and be upto speed with any technol
 
 # Projects
 [Project 1 - Todoey - Flutter - Mobile App](#user-content-project-1-todoey---flutter---mobile-app)
+
 [Project 2 - ASP.NET WishList App - MVC Web App](#user-content-project-2-wishlist-app---net-core-30-mvc---web-app)
 
 # Project 1: Todoey - Flutter - Mobile App
